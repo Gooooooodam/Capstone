@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pair_trading</title>
+<!---->
+<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="../static/css/swipebox.css">
+<!---->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!---->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/numscroller-1.0.js"></script>
+<!---->
+<link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<!--startsmothscrolling-->
+<script type="text/javascript" src="../static/js/move-top.js"></script>
+<script type="text/javascript" src="../static/js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+	<!--script-->
+<script src="../static/js/responsiveslides.min.js"></script>
+ <script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+  <!-- swipe box js -->
+		<script src="../static/js/jquery.swipebox.min.js"></script>
+			<script type="text/javascript">
+				jQuery(function($) {
+				$(".swipebox").swipebox();
+				});
+		</script>
+	<!-- //swipe box js -->
+
+</head>
+<body>
+	<!--header-->	
+		<div class="banner">
+			<div class="container">
+				<div class="navigation wow fadeInLeft animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right link-effect">
+									<li><a href="/">Home </a></li>
+									<li><a href="#about" class="scroll">Pair_trading</a></li>
+									<li><a href="#services" class="scroll">Strategies</a></li>
+									<li><a href="#contact" class="scroll" >Contact</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+					</nav>
+				</div>
+				<div class="banner-info">
+					<div class="logo wow fadeInRight animated" data-wow-delay=".5s">
+						<h3><a href="index.html">E</a></h3>
+					</div>
+						<h1 class="wow fadeInRight animated" data-wow-delay=".5s">Capstone-Erin</h1>
+						<p class="wow fadeInRight animated" data-wow-delay=".5s">Make Trading Easier</p>
+				</div>
+					
+			</div>
+		</div>
+		<div class="content">
+		<!--about-->
+			<div class="about-w3" id="about">
+				<div class="container">
+					<h2 class="tittle"><span>[</span> Pair_trading Strategy Configuration <span>]</span></h2>
+					<div class="about-grids">
+						<div class="row">
+						<div class="col-md-6 about-grid">
+							<div class="about-top">
+								<form id="Pair_tradingForm">
+									<h4>Enter your Stock Informations:</h4>
+									<span></span><br/>
+        							<input type="date" id="start-date" name="start-date" required><br><br>
+        							<input type="date" id="end-date" name="end-date" required><br><br>
+        							<input type="text" id="ticker1" name="ticker1" placeholder="Ticker1:" required><br><br>
+        							<input type="text" id="ticker2" name="slicer2" placeholder="Ticker2:" required><br><br>
+        							<button class="btn btn-primary" type="submit">Submit</button>
+    							</form>
+							</div>
+						</div>
+							<div id="resultMessageContainer">
+							</div>
+						<div id="resultImageContainer">
+						<h2>Pair_trading Image Generate:</h2>
+    					</div>
+					</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--about-->
+		<!--services-->
+			<div class="services" id="services">
+				<div class="container">
+					<h3 class="tittle"><span>[</span> Strategies <span>]</span></h3>
+						<p class="about-text1">You can select your prefered strategies</p>
+					<div class="service-grids">
+						<div class="col-md-4 ser-grid">
+							<div class="ser-left">
+								<i class="glyphicon glyphicon-signal" aria-hidden="true"></i>
+							</div>
+							<div class="ser-right">
+								<a href="/macd"><h4>MACD</h4></a>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore oluptate velit es pariatur</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-md-4 ser-grid">
+							<div class="ser-left">
+								<i class="glyphicon glyphicon-signal" aria-hidden="true"></i>
+							</div>
+							<div class="ser-right">
+								<a href="/Parabolic"><h4>Parabolic</h4></a>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore oluptate velit es pariatur</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-md-4 ser-grid">
+							<div class="ser-left">
+								<i class="glyphicon glyphicon-signal" aria-hidden="true"></i>
+							</div>
+							<div class="ser-right">
+								<a href="/Pair_trading"><h4>Pair_trading</h4></a>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore oluptate velit es pariatur</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="service-grids">
+						<div class="col-md-4 ser-grid">
+							<div class="ser-left">
+								<i class="glyphicon glyphicon-signal" aria-hidden="true"></i>
+							</div>
+							<div class="ser-right">
+								<a href="/Heikin_Ashi"><h4>Heikin_Ashi</h4></a>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore oluptate velit es pariatur</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-md-4 ser-grid">
+							<div class="ser-left">
+								<i class="glyphicon glyphicon-signal" aria-hidden="true"></i>
+							</div>
+							<div class="ser-right">
+								<a href="/RSI"><h4>RSI</h4></a>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore oluptate velit es pariatur</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<!--services-->
+
+	<div class="footer" id="contact">
+		<div class="container">
+			<div class="footer-top">
+				<div class="col-md-3 footer-left">
+					<h4>Address</h4>
+						<address>
+							235 Grand St.<br>
+							Jersey City, NJ 07302<br>
+							<abbr title="Phone">P :</abbr> (123) 786-2534
+						</address>
+				</div>
+				<div class="col-md-6 footer-middle">
+					<h4>Contact</h4>
+					<form>
+						<div class="ft-lt">
+							<input type="text" value="First Name" placeholder="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'First Name';}">	
+							<input type="text" value="Last Name" placeholder="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Last Name';}">				
+							<input type="text" value="Email Address" placeholder="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						</div>
+						<div class="ft-rgt">
+							<textarea placeholder="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>	
+							<input type="submit" value="Submit">
+						</div>
+					</form>
+				</div>
+				<div class="col-md-3 footer-left">
+					<h4>Follow Us</h4>
+						<div class="social-icons">
+							<a href="#"><i class="icon"></i></a>
+							<a href="#"><i class="icon1"></i></a>
+							<a href="#"><i class="icon2"></i></a>
+						</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="footer-text">
+				<p>Presented by: Erin Zhou</p>
+			</div>
+		</div>
+	</div>
+			<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'home', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="home" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="news-gr">
+							<img src="../static/image/J.jpg" class="img-responsive" alt=""/>
+							<h3 class="tittle">Pecuniary</h3>
+								<p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris. Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel ermentum pretium. Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus.</p>
+								<p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris. Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel ermentum pretium. Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus.</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<script>
+        document.getElementById('Pair_tradingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // 获取表单数据
+            const formData = {
+                start_date: document.getElementById('start-date').value,
+                end_date: document.getElementById('end-date').value,
+                ticker1: document.getElementById('ticker1').value,
+                ticker2: document.getElementById('ticker2').value
+            };
+
+            // 将表单数据发送到后端
+            fetch('/pair_trading_calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 假设后端返回图像的URL
+                const imgContainer = document.getElementById('resultImageContainer');
+                const messageContainer = document.getElementById('resultMessageContainer')
+                imgContainer.innerHTML = ''; // 清除之前的内容
+                messageContainer.innerHTML = '';
+                const text = new Text();
+                text.data = data.messages;
+                messageContainer.appendChild(text)
+
+                const img1 = new Image();
+                img1.src = data.imageUrl;
+                imgContainer.appendChild(img1);
+
+
+                 const img2 = new Image();
+                img2.src = data.portfolio_url;
+                imgContainer.appendChild(img2);
+
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
