@@ -16,7 +16,7 @@ import numpy as np
 import os
 
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='Your key here')
 
 app = Flask(__name__)
 CORS(app)
